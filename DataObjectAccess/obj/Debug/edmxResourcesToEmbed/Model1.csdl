@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Industries" EntityType="Model1.Industry" />
+    <EntitySet Name="SubIndustries" EntityType="Model1.SubIndustry" />
+    <AssociationSet Name="IndustrySubIndustry" Association="Model1.IndustrySubIndustry">
+      <End Role="Industry" EntitySet="Industries" />
+      <End Role="SubIndustry" EntitySet="SubIndustries" />
+    </AssociationSet>
+    <EntitySet Name="Categories" EntityType="Model1.Category" />
+    <EntitySet Name="Keywords" EntityType="Model1.Keyword" />
+    <EntitySet Name="Products" EntityType="Model1.Product" />
+    <EntitySet Name="Images" EntityType="Model1.Image" />
+    <AssociationSet Name="ProductImage" Association="Model1.ProductImage">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Image" EntitySet="Images" />
+    </AssociationSet>
+    <AssociationSet Name="IndustryProduct" Association="Model1.IndustryProduct">
+      <End Role="Industry" EntitySet="Industries" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <EntitySet Name="subCategories" EntityType="Model1.subCategory" />
+    <AssociationSet Name="CategorysubCategory" Association="Model1.CategorysubCategory">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="subCategory" EntitySet="subCategories" />
+    </AssociationSet>
+    <AssociationSet Name="CategoryProduct" Association="Model1.CategoryProduct">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <EntitySet Name="Brands" EntityType="Model1.Brand" />
+    <AssociationSet Name="BrandProduct" Association="Model1.BrandProduct">
+      <End Role="Brand" EntitySet="Brands" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <EntitySet Name="Reviews" EntityType="Model1.Review" />
+    <AssociationSet Name="ProductReview" Association="Model1.ProductReview">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Review" EntitySet="Reviews" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Industry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IndustryName" Type="String" Nullable="false" />
+    <NavigationProperty Name="SubIndustries" Relationship="Model1.IndustrySubIndustry" FromRole="Industry" ToRole="SubIndustry" />
+    <NavigationProperty Name="Products" Relationship="Model1.IndustryProduct" FromRole="Industry" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="SubIndustry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <NavigationProperty Name="Industry" Relationship="Model1.IndustrySubIndustry" FromRole="SubIndustry" ToRole="Industry" />
+    <Property Name="IndustryId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="IndustrySubIndustry">
+    <End Type="Model1.Industry" Role="Industry" Multiplicity="1" />
+    <End Type="Model1.SubIndustry" Role="SubIndustry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Industry">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SubIndustry">
+        <PropertyRef Name="IndustryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <NavigationProperty Name="subCategories" Relationship="Model1.CategorysubCategory" FromRole="Category" ToRole="subCategory" />
+    <NavigationProperty Name="Products" Relationship="Model1.CategoryProduct" FromRole="Category" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Keyword">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Word" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DisplayName" Type="String" Nullable="false" />
+    <Property Name="RevisionDate" Type="DateTime" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="ListOrderOverride" Type="Int32" Nullable="false" />
+    <Property Name="ShortDescription" Type="String" Nullable="false" />
+    <NavigationProperty Name="Images" Relationship="Model1.ProductImage" FromRole="Product" ToRole="Image" />
+    <NavigationProperty Name="Industry" Relationship="Model1.IndustryProduct" FromRole="Product" ToRole="Industry" />
+    <Property Name="IndustryId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Category" Relationship="Model1.CategoryProduct" FromRole="Product" ToRole="Category" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Brand" Relationship="Model1.BrandProduct" FromRole="Product" ToRole="Brand" />
+    <Property Name="BrandId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Reviews" Relationship="Model1.ProductReview" FromRole="Product" ToRole="Review" />
+  </EntityType>
+  <EntityType Name="Image">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ImageURI" Type="String" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Model1.ProductImage" FromRole="Image" ToRole="Product" />
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="ProductImage">
+    <End Type="Model1.Product" Role="Product" Multiplicity="1" />
+    <End Type="Model1.Image" Role="Image" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Image">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IndustryProduct">
+    <End Type="Model1.Industry" Role="Industry" Multiplicity="1" />
+    <End Type="Model1.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Industry">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="IndustryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="subCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <NavigationProperty Name="Category" Relationship="Model1.CategorysubCategory" FromRole="subCategory" ToRole="Category" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="CategorysubCategory">
+    <End Type="Model1.Category" Role="Category" Multiplicity="1" />
+    <End Type="Model1.subCategory" Role="subCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="subCategory">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CategoryProduct">
+    <End Type="Model1.Category" Role="Category" Multiplicity="1" />
+    <End Type="Model1.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Model1.BrandProduct" FromRole="Brand" ToRole="Product" />
+  </EntityType>
+  <Association Name="BrandProduct">
+    <End Type="Model1.Brand" Role="Brand" Multiplicity="1" />
+    <End Type="Model1.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="BrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Review">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Stars" Type="Int32" Nullable="false" />
+    <Property Name="Comments" Type="String" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Model1.ProductReview" FromRole="Review" ToRole="Product" />
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" />
+  </EntityType>
+  <Association Name="ProductReview">
+    <End Type="Model1.Product" Role="Product" Multiplicity="1" />
+    <End Type="Model1.Review" Role="Review" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Review">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

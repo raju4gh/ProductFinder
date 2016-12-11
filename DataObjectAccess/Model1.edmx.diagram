@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="78e05e01f1624ec695746719b35f432e" Name="Diagram1" >
+        <EntityTypeShape EntityType="Model1.Industry" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model1.SubIndustry" Width="1.5" PointX="3.375" PointY="0.75" />
+        <AssociationConnector Association="Model1.IndustrySubIndustry" />
+        <EntityTypeShape EntityType="Model1.Category" Width="1.5" PointX="5.5" PointY="0.75" />
+        <EntityTypeShape EntityType="Model1.Keyword" Width="1.5" PointX="0.625" PointY="4.125" />
+        <EntityTypeShape EntityType="Model1.Product" Width="1.5" PointX="9.875" PointY="3.75" />
+        <EntityTypeShape EntityType="Model1.Image" Width="1.5" PointX="2.5" PointY="4.875" />
+        <AssociationConnector Association="Model1.ProductImage" />
+        <AssociationConnector Association="Model1.IndustryProduct" />
+        <EntityTypeShape EntityType="Model1.subCategory" Width="1.5" PointX="8.125" PointY="1.625" />
+        <AssociationConnector Association="Model1.CategorysubCategory" />
+        <AssociationConnector Association="Model1.CategoryProduct" />
+        <EntityTypeShape EntityType="Model1.Brand" Width="1.5" PointX="10.125" PointY="1.25" />
+        <AssociationConnector Association="Model1.BrandProduct" />
+        <EntityTypeShape EntityType="Model1.Review" Width="1.5" PointX="5.25" PointY="4.25" />
+        <AssociationConnector Association="Model1.ProductReview" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

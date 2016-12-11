@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SpxModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Spx.dbo.Brand' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Brand">
+          <Property Name="_ID" Type="char" MaxLength="3" />
+          <Property Name="_IDBrands" Type="char" MaxLength="1" />
+          <Property Name="_IDProductSummary" Type="char" MaxLength="3" />
+          <Property Name="count" Type="char" MaxLength="3" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Spx.dbo.Brands' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Brands">
+          <Property Name="_ID" Type="char" MaxLength="1" />
+          <Property Name="_IDCounts" Type="char" MaxLength="1" />
+          <Property Name="Brand" Type="char" MaxLength="3" />
+          <Property Name="Brands" Type="char" MaxLength="7" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Spx.dbo.Categories' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Categories">
+          <Property Name="_ID" Type="char" MaxLength="1" />
+          <Property Name="_IDCounts" Type="char" MaxLength="1" />
+          <Property Name="Categories" Type="text" />
+          <Property Name="Category" Type="text" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Spx.dbo.Category' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Category">
+          <Property Name="_ID" Type="char" MaxLength="3" />
+          <Property Name="_IDCategories" Type="char" MaxLength="1" />
+          <Property Name="_IDProductSummary" Type="char" MaxLength="3" />
+          <Property Name="Category" Type="char" MaxLength="14" />
+          <Property Name="count" Type="char" MaxLength="2" />
+          <Property Name="SubCategory" Type="char" MaxLength="41" />
+          <Property Name="Title" Type="char" MaxLength="15" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Spx.dbo.Counts' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Counts">
+          <Property Name="_ID" Type="char" MaxLength="1" />
+          <Property Name="_IDProductFinder" Type="char" MaxLength="1" />
+          <Property Name="Applications" Type="char" MaxLength="1" />
+          <Property Name="Brands" Type="char" MaxLength="5" />
+          <Property Name="Categories" Type="char" MaxLength="5" />
+          <Property Name="Counts" Type="char" MaxLength="40" />
+          <Property Name="Industries" Type="char" MaxLength="5" />
+          <Property Name="Keywords" Type="char" MaxLength="5" />
+          <Property Name="Results" Type="char" MaxLength="5" />
+          <Property Name="SubIndustries" Type="char" MaxLength="5" />
+          <Property Name="Types" Type="char" MaxLength="1" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Spx.dbo.Image' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Image">
+          <Property Name="_ID" Type="char" MaxLength="3" />
+          <Property Name="_IDProductSummary" Type="char" MaxLength="3" />
+          <Property Name="alt" Type="char" MaxLength="1" />
+          <Property Name="height" Type="char" MaxLength="3" />
+          <Property Name="src" Type="char" MaxLength="84" />
+          <Property Name="title" Type="char" MaxLength="1" />
+          <Property Name="width" Type="char" MaxLength="3" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Spx.dbo.Industries' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Industries">
+          <Property Name="_ID" Type="char" MaxLength="1" />
+          <Property Name="_IDCounts" Type="char" MaxLength="1" />
+          <Property Name="Industries" Type="char" MaxLength="21" />
+          <Property Name="Industry" Type="char" MaxLength="43" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Spx.dbo.Industry' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Industry">
+          <Property Name="_ID" Type="char" MaxLength="3" />
+          <Property Name="_IDIndustries" Type="char" MaxLength="1" />
+          <Property Name="_IDProductSummary" Type="char" MaxLength="3" />
+          <Property Name="count" Type="char" MaxLength="3" />
+          <Property Name="Industry" Type="char" MaxLength="42" />
+          <Property Name="SubIndustry" Type="char" MaxLength="98" />
+          <Property Name="Title" Type="char" MaxLength="17" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Spx.dbo.Keyword' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Keyword">
+          <Property Name="_ID" Type="char" MaxLength="2" />
+          <Property Name="_IDKeywords" Type="char" MaxLength="1" />
+          <Property Name="count" Type="char" MaxLength="2" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Spx.dbo.Keywords' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Keywords">
+          <Property Name="_ID" Type="char" MaxLength="1" />
+          <Property Name="_IDCounts" Type="char" MaxLength="1" />
+          <Property Name="Keyword" Type="text" />
+          <Property Name="Keywords" Type="text" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Spx.dbo.ProductFinder' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ProductFinder">
+          <Property Name="_ID" Type="char" MaxLength="1" />
+          <Property Name="Counts" Type="char" MaxLength="3" />
+          <Property Name="ProductFinder" Type="text" />
+          <Property Name="ProductSummary" Type="text" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Spx.dbo.ProductSummary' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ProductSummary">
+          <Property Name="_ID" Type="char" MaxLength="3" />
+          <Property Name="_IDProductFinder" Type="char" MaxLength="1" />
+          <Property Name="Brand" Type="char" MaxLength="3" />
+          <Property Name="Category" Type="char" MaxLength="5" />
+          <Property Name="DisplayName" Type="char" MaxLength="69" />
+          <Property Name="Image" Type="char" MaxLength="1" />
+          <Property Name="Industry" Type="char" MaxLength="10" />
+          <Property Name="ListOrderOverride" Type="char" MaxLength="3" />
+          <Property Name="ProductSummary" Type="char" MaxLength="105" />
+          <Property Name="RevisionDate" Type="char" MaxLength="19" />
+          <Property Name="SelectedSubIndustry" Type="char" MaxLength="193" />
+          <Property Name="ShortDescription" Type="char" MaxLength="166" />
+          <Property Name="Title" Type="char" MaxLength="42" />
+          <Property Name="uri" Type="char" MaxLength="12" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Spx.dbo.Results' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Results">
+          <Property Name="_ID" Type="char" MaxLength="1" />
+          <Property Name="_IDCounts" Type="char" MaxLength="1" />
+          <Property Name="Results" Type="char" MaxLength="7" />
+          <Property Name="TotalResults" Type="char" MaxLength="3" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Spx.dbo.SubIndustries' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SubIndustries">
+          <Property Name="_ID" Type="char" MaxLength="1" />
+          <Property Name="_IDCounts" Type="char" MaxLength="1" />
+          <Property Name="SubIndustries" Type="char" MaxLength="105" />
+          <Property Name="SubIndustry" Type="char" MaxLength="250" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Spx.dbo.SubIndustry' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SubIndustry">
+          <Property Name="_ID" Type="char" MaxLength="3" />
+          <Property Name="_IDIndustry" Type="char" MaxLength="3" />
+          <Property Name="_IDSubIndustries" Type="char" MaxLength="1" />
+          <Property Name="count" Type="char" MaxLength="3" />
+        </EntityType>-->
+  <EntityContainer Name="SpxModelStoreContainer" />
+</Schema>

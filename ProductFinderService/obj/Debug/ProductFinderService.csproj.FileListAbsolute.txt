@@ -1,0 +1,14 @@
+C:\Users\mnage\Documents\Visual Studio 2013\Projects\ProductFinderService\ProductFinderService\bin\EntityFramework.xml
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\ProductFinderService\bin\ProductFinderService.dll.config
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\ProductFinderService\bin\ProductFinderService.dll
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\ProductFinderService\bin\ProductFinderService.pdb
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\ProductFinderService\bin\BusinessObjectAccess.dll
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\ProductFinderService\bin\DataObjectAccess.dll
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\ProductFinderService\bin\EntityFramework.dll
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\ProductFinderService\bin\EntityFramework.SqlServer.dll
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\ProductFinderService\bin\BusinessObjectAccess.pdb
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\ProductFinderService\bin\DataObjectAccess.pdb
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\ProductFinderService\bin\EntityFramework.SqlServer.xml
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\ProductFinderService\obj\Debug\ProductFinderService.csprojResolveAssemblyReference.cache
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\ProductFinderService\obj\Debug\ProductFinderService.dll
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\ProductFinderService\obj\Debug\ProductFinderService.pdb

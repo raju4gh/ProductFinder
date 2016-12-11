@@ -1,0 +1,9 @@
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\BusinessObjectAccess\bin\Debug\BusinessObjectAccess.dll
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\BusinessObjectAccess\bin\Debug\BusinessObjectAccess.pdb
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\BusinessObjectAccess\bin\Debug\DataObjectAccess.dll
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\BusinessObjectAccess\bin\Debug\EntityFramework.dll
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\BusinessObjectAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\BusinessObjectAccess\bin\Debug\DataObjectAccess.pdb
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\BusinessObjectAccess\obj\Debug\BusinessObjectAccess.csprojResolveAssemblyReference.cache
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\BusinessObjectAccess\obj\Debug\BusinessObjectAccess.dll
+C:\Users\mnage\documents\visual studio 2013\Projects\ProductFinderService\BusinessObjectAccess\obj\Debug\BusinessObjectAccess.pdb
